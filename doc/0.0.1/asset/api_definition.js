@@ -1,0 +1,1 @@
+var ZephirApi = {"allClasses":{"Str\\Camel":{"type":"class","name":"Str\\Camel","shortname":"Camel"}},"allNamespaces":{"Str":{"name":"Str","shortName":"Str","parentName":"","classes":["Str\\Camel"],"namespaces":[]}},"classes":[],"namespaces":["Str"]};
