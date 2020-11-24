@@ -5,7 +5,11 @@ ZEPHIR_INIT_CLASS(Str_Camel);
 
 PHP_METHOD(Str_Camel, convert);
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_str_camel_convert, 0, 0, 2)
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_str_camel_convert, 0, 2, IS_STRING, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_str_camel_convert, 0, 2, IS_STRING, NULL, 0)
+#endif
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
 #else
