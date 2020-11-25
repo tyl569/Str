@@ -87,7 +87,7 @@ PHP_METHOD(Str_Camel, convert) {
 			}
 		}
 	}
-	RETURN_CTOR(&str);
+	RETURN_CTOR(&after);
 
 }
 
