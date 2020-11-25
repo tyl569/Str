@@ -30,8 +30,8 @@ Kernel configured for up to 4 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3
 Primary memory available: 8.00 gigabytes
-Default processor set: 339 tasks, 1827 threads, 4 processors
-Load average: 3.71, Mach factor: 0.68
+Default processor set: 339 tasks, 1876 threads, 4 processors
+Load average: 4.27, Mach factor: 0.60
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
@@ -347,7 +347,7 @@ configure:6508: checking for -single_module linker flag
 configure:6529: result: yes
 configure:6531: checking for -exported_symbols_list linker flag
 configure:6547: gcc -o conftest -O2 -fvisibility=hidden -Wparentheses -DZEPHIR_RELEASE=1   -Wl,-exported_symbols_list,conftest.sym conftest.c  >&5
-ld: warning: cannot export hidden symbol _main from /var/folders/tn/n7x7ngp11nj5yv9xqxl70ynr0000gn/T/conftest-5948b3.o
+ld: warning: cannot export hidden symbol _main from /var/folders/tn/n7x7ngp11nj5yv9xqxl70ynr0000gn/T/conftest-8f8188.o
 configure:6550: $? = 0
 configure:6564: result: yes
 configure:6682: checking if gcc supports -fno-rtti -fno-exceptions
