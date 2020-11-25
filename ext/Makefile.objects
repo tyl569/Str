@@ -40,6 +40,8 @@ kernel/exit.lo: /Users/feilong/data/service/str/ext/kernel/exit.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/kernel/exit.c -o kernel/exit.lo 
 str/camel.lo: /Users/feilong/data/service/str/ext/str/camel.zep.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/camel.zep.c -o str/camel.lo 
+str/sign.lo: /Users/feilong/data/service/str/ext/str/sign.zep.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/sign.zep.c -o str/sign.lo 
 str/tools.lo: /Users/feilong/data/service/str/ext/str/tools.zep.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/tools.zep.c -o str/tools.lo 
 $(phplibdir)/str.la: ./str.la
