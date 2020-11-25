@@ -2,4 +2,3 @@
 .idea
 compile-errors.log
 compile.log
-str/*.zep

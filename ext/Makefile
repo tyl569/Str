@@ -4,14 +4,14 @@ top_srcdir = /Users/feilong/data/service/str/ext
 top_builddir = /Users/feilong/data/service/str/ext
 EGREP = /usr/bin/grep -E
 SED = /usr/bin/sed
-CONFIGURE_COMMAND = './configure'
-CONFIGURE_OPTIONS =
+CONFIGURE_COMMAND = './configure' '--enable-str'
+CONFIGURE_OPTIONS = '--enable-str'
 SHLIB_SUFFIX_NAME = dylib
 SHLIB_DL_SUFFIX_NAME = so
 ZEND_EXT_TYPE = zend_extension
 RE2C = re2c
 AWK = awk
-shared_objects_str = str.lo kernel/main.lo kernel/memory.lo kernel/exception.lo kernel/debug.lo kernel/backtrace.lo kernel/object.lo kernel/array.lo kernel/string.lo kernel/fcall.lo kernel/require.lo kernel/file.lo kernel/operators.lo kernel/math.lo kernel/concat.lo kernel/variables.lo kernel/filter.lo kernel/iterator.lo kernel/time.lo kernel/exit.lo str/camel.lo
+shared_objects_str = str.lo kernel/main.lo kernel/memory.lo kernel/exception.lo kernel/debug.lo kernel/backtrace.lo kernel/object.lo kernel/array.lo kernel/string.lo kernel/fcall.lo kernel/require.lo kernel/file.lo kernel/operators.lo kernel/math.lo kernel/concat.lo kernel/variables.lo kernel/filter.lo kernel/iterator.lo kernel/time.lo kernel/exit.lo str/camel.lo str/tools.lo
 PHP_PECL_EXTENSION = str
 STR_SHARED_LIBADD =
 PHP_MODULES = $(phplibdir)/str.la
@@ -24,10 +24,10 @@ libdir = ${exec_prefix}/lib
 prefix = /usr/local/Cellar/php/7.3.3
 phplibdir = /Users/feilong/data/service/str/ext/modules
 phpincludedir = /usr/local/Cellar/php/7.3.3/include/php
-CC = cc
-CFLAGS = -g -O2
+CC = gcc
+CFLAGS = -O2 -fvisibility=hidden -Wparentheses -DZEPHIR_RELEASE=1
 CFLAGS_CLEAN = $(CFLAGS)
-CPP = cc -E
+CPP = gcc -E
 CPPFLAGS = -DHAVE_CONFIG_H
 CXX =
 CXXFLAGS =
@@ -232,6 +232,8 @@ kernel/exit.lo: /Users/feilong/data/service/str/ext/kernel/exit.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/kernel/exit.c -o kernel/exit.lo 
 str/camel.lo: /Users/feilong/data/service/str/ext/str/camel.zep.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/camel.zep.c -o str/camel.lo 
+str/tools.lo: /Users/feilong/data/service/str/ext/str/tools.zep.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/tools.zep.c -o str/tools.lo 
 $(phplibdir)/str.la: ./str.la
 	$(LIBTOOL) --mode=install cp ./str.la $(phplibdir)
 

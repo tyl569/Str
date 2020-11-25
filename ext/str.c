@@ -24,6 +24,7 @@
 
 
 zend_class_entry *str_camel_ce;
+zend_class_entry *str_tools_ce;
 
 ZEND_DECLARE_MODULE_GLOBALS(str)
 
@@ -36,6 +37,7 @@ static PHP_MINIT_FUNCTION(str)
 	REGISTER_INI_ENTRIES();
 	zephir_module_init();
 	ZEPHIR_INIT(Str_Camel);
+	ZEPHIR_INIT(Str_Tools);
 	
 	return SUCCESS;
 }
