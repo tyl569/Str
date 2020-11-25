@@ -1,5 +1,7 @@
 # PHP拓展实现字符串操作
 
+![image](https://img.shields.io/badge/php-7.0%2B-blue)
+
 # Install
 
 ```shell script
