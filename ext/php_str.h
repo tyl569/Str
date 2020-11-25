@@ -13,7 +13,7 @@
 #define PHP_STR_NAME        "str"
 #define PHP_STR_VERSION     "0.0.1"
 #define PHP_STR_EXTNAME     "str"
-#define PHP_STR_AUTHOR      "Phalcon Team"
+#define PHP_STR_AUTHOR      "Tyl569"
 #define PHP_STR_ZEPVERSION  "0.12.19-4345593"
 #define PHP_STR_DESCRIPTION ""
 

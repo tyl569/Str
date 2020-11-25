@@ -7,7 +7,6 @@ class Camel
         string after = "";
         var pos;
         int i = 0;
-        var col;
         for i in range(0, strlen(str) - 1) {
             if (str[i] == symbol) {
                 let i++;
