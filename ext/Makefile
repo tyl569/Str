@@ -11,7 +11,7 @@ SHLIB_DL_SUFFIX_NAME = so
 ZEND_EXT_TYPE = zend_extension
 RE2C = re2c
 AWK = awk
-shared_objects_str = str.lo kernel/main.lo kernel/memory.lo kernel/exception.lo kernel/debug.lo kernel/backtrace.lo kernel/object.lo kernel/array.lo kernel/string.lo kernel/fcall.lo kernel/require.lo kernel/file.lo kernel/operators.lo kernel/math.lo kernel/concat.lo kernel/variables.lo kernel/filter.lo kernel/iterator.lo kernel/time.lo kernel/exit.lo str/camel.lo
+shared_objects_str = str.lo kernel/main.lo kernel/memory.lo kernel/exception.lo kernel/debug.lo kernel/backtrace.lo kernel/object.lo kernel/array.lo kernel/string.lo kernel/fcall.lo kernel/require.lo kernel/file.lo kernel/operators.lo kernel/math.lo kernel/concat.lo kernel/variables.lo kernel/filter.lo kernel/iterator.lo kernel/time.lo kernel/exit.lo str/camel.lo str/tools.lo
 PHP_PECL_EXTENSION = str
 STR_SHARED_LIBADD =
 PHP_MODULES = $(phplibdir)/str.la
@@ -232,6 +232,8 @@ kernel/exit.lo: /Users/feilong/data/service/str/ext/kernel/exit.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/kernel/exit.c -o kernel/exit.lo 
 str/camel.lo: /Users/feilong/data/service/str/ext/str/camel.zep.c
 	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/camel.zep.c -o str/camel.lo 
+str/tools.lo: /Users/feilong/data/service/str/ext/str/tools.zep.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/Users/feilong/data/service/str/ext $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /Users/feilong/data/service/str/ext/str/tools.zep.c -o str/tools.lo 
 $(phplibdir)/str.la: ./str.la
 	$(LIBTOOL) --mode=install cp ./str.la $(phplibdir)
 

@@ -30,7 +30,7 @@ PHP_METHOD(Str_Camel, convert) {
 
 	unsigned char _3$$3, _5$$5, _7$$6;
 	zend_bool _0;
-	zend_long i = 0, _1, _2;
+	zend_long i, _1, _2;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	char symbol;
 	zval *str_param = NULL, *symbol_param = NULL, pos, _4$$5, _6$$5;
@@ -52,6 +52,7 @@ PHP_METHOD(Str_Camel, convert) {
 
 	ZEPHIR_INIT_VAR(&after);
 	ZVAL_STRING(&after, "");
+	i = 0;
 	_2 = (zephir_fast_strlen_ev(&str) - 1);
 	_1 = 0;
 	_0 = 0;

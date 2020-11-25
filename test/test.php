@@ -1,17 +1,17 @@
 <?php
 
-$runTime = 1;
+$runTime = 10000;
 
 $start = microtime(true) * 1000;
 for ($i = 1; $i <= $runTime; $i++) {
-    echo convert1("snake-name-name", "-");
+    convert1("snake-name-name-name-name", "-");
 }
 $end = microtime(true) * 1000;
 echo "php代码运行时间:" . ($end - $start) . "\n";
 
 $start = microtime(true) * 1000;
 for ($i = 1; $i <= $runTime; $i++) {
-    echo Str\Camel::convert("snake-name-name", "-");
+    Str\Camel::convert("snake-name-name-name-name", "-");
 }
 $end = microtime(true) * 1000;
 echo "扩展运行时间" . ($end - $start) . "\n";
